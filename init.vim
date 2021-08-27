@@ -54,7 +54,6 @@ nmap <C-s> :w<Enter>
 imap <C-s><C-s> <Esc>:! git checkout master && git add . && git commit -m "/as-m" && git push -u origin master && :! git checkout as <Enter>
 nmap <C-s><C-s> :! git checkout master && git add . && git commit -m "/as-m" && git push -u origin master && :! git checkout as <Enter>
 
-"aas 
 "cerrar y salir modos
 nmap <C-x> :qa
 nmap <C-x><C-x><C-x> :qa!
