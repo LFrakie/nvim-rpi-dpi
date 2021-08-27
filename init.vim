@@ -51,8 +51,10 @@ nmap <C-s> :w<Enter>
 
 "######### AutoSabe / git
 "---Guardar y subir a git branch
-imap <C-s><C-s> <Esc>:! git checkout master && git add . <Enter> :! git commit -m "/as-m" && git push -u origin master <Enter> git checkout as <Enter>
-nmap <C-s><C-s> :! git add .<Enter> :! git commit -m "WGC up M/I" ; git push -u origin
+imap <C-s><C-s> <Esc>:! git add . && git commit -m "/as-m" && git push -u origin master <Enter>
+
+nmap <C-s><C-s> :! git add . && git commit -m "/as-m" && git push -u origin master <Enter>
+
 "cerrar y salir modos
 nmap <C-x> :qa
 nmap <C-x><C-x><C-x> :qa!
