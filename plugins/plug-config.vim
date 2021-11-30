@@ -6,7 +6,7 @@
 "╚═╝░░░░░╚══════╝░╚═════╝░░╚═════╝░░░░░░░░╚════╝░░╚════╝░╚═╝░░╚══╝╚═╝░░░░░╚═╝░╚═════╝░
 
 "import COC config
-source /root/.config/nvim/plugins/coc-config.vim
+source $HOME/.config/nvim/plugins/coc-config.vim
 
 "▄▀█ █ █▀█ █░░ █ █▄░█ █▀▀
 "█▀█ █ █▀▄ █▄▄ █ █░▀█ ██▄

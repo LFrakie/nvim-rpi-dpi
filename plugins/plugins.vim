@@ -1,5 +1,5 @@
 "Plugins
-call plug#begin('/root/.config/nvim/plugged')
+call plug#begin('$HOME/.config/nvim/plugged')
 " Temas
 " Themes
 Plug 'morhetz/gruvbox'
@@ -86,7 +86,13 @@ Plug 'KabbAmine/vCoolor.vim'
 "Cerrar todos los buffers excepto el actual
 Plug 'numtostr/BufOnly.nvim', { 'on': 'BufOnly' }
 
+"Para los Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
+"Para syntax de markdown
+Plug 'gabrielelana/vim-markdown'
 
-
+"Par añadir comentarios
+Plug 'tpope/vim-commentary'
 call plug#end()

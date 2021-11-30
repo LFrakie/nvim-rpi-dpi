@@ -36,10 +36,15 @@ set guioptions-=L
 imap hh <Esc>
 imap HH <Esc>2
 imap <C-c> <Esc>l
+imap <C-e> <Esc>3
+nmap <C-e> a
 nmap <C-c> a
 "Posicionarse al inicio o final de una linea
 nmap n 0 
 nmap m $
+
+" Añadir comentario 
+noremap <leader>ç :Commentary<cr>
 
 
 " ######### GUARDADO #########
@@ -74,9 +79,9 @@ vnoremap < <gv
 vnoremap > >gv
 
 "-------------------------------Sources-------------------------------
-source /root/.config/nvim/plugins/plugins.vim
-source /root/.config/nvim/plugins/plug-config.vim
-source /root/.config/nvim/themes/onedark.vim
+source $HOME/.config/nvim/plugins/plugins.vim
+source $HOME/.config/nvim/plugins/plug-config.vim
+source $HOME/.config/nvim/themes/onedark.vim
 "--------------------------------Plugins Config--------------------------------------------
 
 " toggle terminal
@@ -222,9 +227,13 @@ nmap <leader>f  <Plug>(coc-format-selected)
 let g:rainbow_active = 0 "set to 0 if you want to enable it later via :RainbowToggle
 
 set cmdheight=1
+
 let g:tokyonight_style = 'night' " available: night, storm
-let g:tokyonight_enable_italic = 0
+"let g:molokai_original = 1
+let g:tokyonight_enable_italic = 1
 colorscheme tokyonight
+"colorscheme molokai
+
 "Close tags automatically
 "Cerrar tags automaticamente let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.jsx, *.js' -----------------------------------------------------------------
 
@@ -243,11 +252,31 @@ filetype plugin on
 
 "----------------------------------------------
 ""Ruta de python 
-"let g:python3_host_prog = '/Users/Acer/AppData/Local/Programs/Python/Python39/python.exe'
-"let g:python_host_prog ='/python27/python.exe'
+let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog ='/usr/bin/python2'
 
 " ESTE DE ARRIBA ERA PERO EN LINUX DEBE SER OTRA RUTA
 "test text 
+
+
+""Bracey configs
+let g:bracey_server_allow_remote_connections = 1
+let g:bracey_server_port = 33461
+"let g:bracey_server_path = 'http://192.168.0.130'
+
+
+
+"" Config para los SNIPPETS
+let g:UltiSnipsExpandTrigger="<tab>"
+" list all snippets for current filetype
+let g:UltiSnipsListSnippets="<c-l>"
+
+
+"configuracion para MARKDOWN
+autocmd InsertEnter  *.{markdown,md} set conceallevel=0
+autocmd InsertEnter  *.{markdown,md} set conceallevel=0
+"autocmd InsertLeave  *.{markdown,md} set conceallevel=2
+
 
 "-----------------------------------------------------------------------------------------
 "Inteto de usar ruta de python
